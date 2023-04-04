@@ -17,9 +17,6 @@
     }
 
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       height: 100%;
       width: 100%;
     }
@@ -62,10 +59,13 @@
 
     .bg-shade {
       background: linear-gradient(180deg, var(--light-slate-blue), var(--light-royal-blue));
+      border-bottom-left-radius: 10% !important;
+      border-bottom-right-radius: 10% !important;
     }
 
     .shade-circle {
       background: linear-gradient(var(--violet-blue), var(--persian-blue)) !important;
+    
     }
 
     .white-shade {
@@ -74,11 +74,23 @@
     }
     .set-height {
       height: 700px;
+      border-top-left-radius: 10% ;
+      border-bottom-left-radius: 10% ;
+      background-color: white !important;
     }
     @media(min-width:768px){
       .set-height {
       height: 350px;
     } 
+    .bg-shade {
+      border-radius: 10% !important;
+    }
+      body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
     }
   </style>
 </head>
@@ -99,7 +111,7 @@
           <p class="text-white-50 p-4">You scored more than the average</p>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 text-start shadow p-4  overflow-hidden position-absolute " style="right:0;bottom: 0;">
+      <div class="col-sm-12 col-md-6 text-start  p-4  overflow-hidden position-absolute " style="right:0;bottom: 0;">
         <h6 data-aos="fade-left" data-aos-delay="200"><b>Summary</b></h6>
         <div class="d-flex align-items-center bg-danger p-2 mt-3 rounded-1" data-aos="fade-left" data-aos-delay="250">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
