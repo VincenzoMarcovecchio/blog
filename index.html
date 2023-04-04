@@ -72,13 +72,22 @@
       color: white !important;
       opacity: 0.6 !important;
     }
+    .set-height {
+      height: 700px;
+    }
+    @media(min-width:768px){
+      .set-height {
+      height: 350px;
+    } 
+    }
   </style>
 </head>
 
 <body>
   <section class="row d-grid m-auto h-100 w-100">
-    <div style="padding:0" class="row col-sm-12 col-md-6 text-center shadow m-auto ">
-      <div class="col-sm-12 col-md-6 d-flex flex-column  p-2 bg-shade rounded-3">
+    <div style="padding:0;" class="row col-sm-12 set-height col-md-6 text-center shadow m-auto position-relative ">
+      <div class="col-sm-12 col-md-6 d-flex flex-column p-2 bg-shade position-absolute  rounded-3"
+        style="left: 0;bottom: 0;top: 0;height: 350px;">
         <h6 data-aos="fade-up " class="text-white-50 pt-4">Your result</h6>
         <div class=" m-auto p-3 mt-2 mb-2 text-white rounded-circle p-2 shade-circle" style="height: 120px;width: 120px;
 " data-aos="fade-up" data-aos-delay="100">
@@ -86,17 +95,18 @@
           <small class="text-white-50">out of 100</small>
         </div>
         <div data-aos="fade-up" data-aos-delay="200">
-          <h4 class="text-white fw-bold">Great</h4>
-          <p class="text-white-50">You scored more than the average</p>
+          <h4 style="margin-bottom: -0.8rem;" class="text-white fw-bold">Great</h4>
+          <p class="text-white-50 p-4">You scored more than the average</p>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 text-start shadow p-4 m-auto overflow-hidden">
+      <div class="col-sm-12 col-md-6 text-start shadow p-4  overflow-hidden position-absolute " style="right:0;bottom: 0;">
         <h6 data-aos="fade-left" data-aos-delay="200"><b>Summary</b></h6>
         <div class="d-flex align-items-center bg-danger p-2 mt-3 rounded-1" data-aos="fade-left" data-aos-delay="250">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
             <path stroke="#F55" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
               d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z" />
-          </svg>&nbsp;&nbsp;&nbsp;Reaction <span class="ms-auto text-black-50"><b class="text-black-50">80</b> /
+          </svg>&nbsp;&nbsp;&nbsp;Reaction <span class="ms-auto text-black-50" style="white-space:nowrap"><b
+              class="text-black-50">80</b> /
             100</span>
         </div>
         <div class="d-flex  align-items-center bg-warning p-2 mt-3 rounded-1" data-aos="fade-left" data-aos-delay="300">
@@ -107,15 +117,16 @@
               d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858" />
             <path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
               d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0" />
-          </svg>&nbsp;&nbsp;&nbsp;Memory <span class="ms-auto text-black-50"><b class="text-black-50">80</b> /
+          </svg>&nbsp;&nbsp;&nbsp;Memory <span class="ms-auto text-black-50" style="white-space:nowrap"><b
+              class="text-black-50">80</b> /
             100</span>
         </div>
         <div class="d-flex align-items-center bg-success p-2 mt-3 rounded-1" data-aos="fade-left" data-aos-delay="350">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
             <path stroke="#00BB8F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
               d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z" />
-          </svg>&nbsp;&nbsp;&nbsp;Visual
-          <span class="ms-auto text-black-50"><b class="text-black-50">80</b> / 100</span>
+          </svg>&nbsp;&nbsp;&nbsp;Verbal
+          <span class="ms-auto text-black-50" style="white-space:nowrap"><b class="text-black-50">80</b> / 100</span>
         </div>
         <div class="d-flex  align-items-center bg-primary p-2 mt-3 rounded-1" data-aos="fade-left" data-aos-delay="400">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
@@ -124,7 +135,7 @@
             <path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
               d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z" />
           </svg>&nbsp;&nbsp;&nbsp;Visual
-          <span class="ms-auto text-black-50"><b class="text-black-50">80</b> / 100</span>
+          <span class="ms-auto text-black-50" style="white-space:nowrap"><b class="text-black-50">80</b> / 100</span>
         </div>
         <button class="btn rounded btn-dark mt-4 w-100 rounded-pill">Continue</button>
       </div>
